@@ -1,0 +1,176 @@
+* {
+	font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #E8E8E8;
+}
+
+#container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+/* AQUÍ EMPIEZA LA CABEZERA */
+header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #F4F4F4;
+	padding: 10px;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+/* LOGO - CAJA IZQUIERDA (IMAGEN Y TEXTO) */
+
+.logo {
+	text-align: center;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box-left {
+	padding: 5px;
+}
+
+
+.logo img {
+	width: 70px;
+	height: 60px;
+	vertical-align: top;
+}
+
+.logo-name h1 {
+	font-size: 25px;
+}
+
+.logo-name h2 {
+	font-size: 20px;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+
+header nav {
+	width: 60%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+header nav a {
+	font-size: 20px;
+	color: #000;
+	text-align: center;
+	padding: 10px;
+	flex-grow: 1;
+}
+
+header nav a:hover {
+	color: #C0B283;
+	border-bottom: 3px solid #C0B283;
+}
+
+footer {
+	background-color: #191919;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.text-footer {
+	width: 100%;
+	text-align: center;
+	color: #F4F4F4;
+	font-size: 25px;
+	margin: 10px;
+}
+
+.social-media {
+	margin: auto;
+	background-color: #191919;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.button {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 10px;
+	width: 60px;
+	height: 60px;
+	background-color: #F4F4F4;
+	border-radius: 50px;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease-out;
+	overflow: hidden;
+}
+
+.icons {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	border-radius: 50px;
+	box-sizing: border-box;
+	line-height: 60px;
+	transition: all 0.3s ease-out;
+}
+
+.button .icons .red {
+	font-size: 25px;
+	line-height: 60px;
+}
+
+.button a span {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 60px;
+	margin-left: 10px;
+}
+
+.button:hover {
+	width: 200px;
+}
+
+.button:nth-child(1):hover .icons{
+	background-color: var(--clr);
+	color: #F4F4F4;
+}
+
+.button:nth-child(2):hover .icons{
+	background-color: var(--clr);
+	color: #F4F4F4;
+}
+
+.button:nth-child(3):hover .icons{
+	background-color: var(--clr);
+	color: #F4F4F4;
+}
+
+.button a {
+	color: #000;
+}
+
+strong {
+	color: #F08F3C;
+}
+
+.separator {
+	margin: auto;
+	width: 90%;
+	height: 100px;
+}
