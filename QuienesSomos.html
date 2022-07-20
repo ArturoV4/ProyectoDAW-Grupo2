@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="keywords" content="HTML5, CSS3, JavaScript, Proyecto" />
+  <meta name="description" content="Proyecto del grupo #2 Cueva Jean">
+  <title>Taller Mecánico Automotriz DAW</title>
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- Hoja de estilo interna -->
+  <style>
+    div .elemento strong {
+      color: #F08F3C;
+    }
+
+    div .elemento h2.titulo1 {
+      font-size: 35px;
+    }
+
+    .main {
+      background-color: #F4F4F4;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .box {
+      margin: 10px;
+      width: 45%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-content: flex-start;
+    }
+
+    .title {
+      margin: 14px;
+      margin-bottom: 0.5px;
+      width: 98.2%;
+      text-align: center;
+      color: #373737;
+      font-size: 22px;
+    }
+
+    .compromiso,
+    .politica {
+      text-align: center;
+      margin-left: 30px;
+    }
+
+    .elemento {
+      padding: 5px;
+      min-width: 105px;
+      margin-left: 5px;
+      margin-top: 5px;
+      margin-bottom: 6px;
+      display: inline-block;
+      width: 22%;
+      text-align: center;
+    }
+
+    .elemento:nth-child(1) {
+      width: 100%;
+    }
+
+    .elemento:nth-child(2) {
+      width: 49.2%;
+    }
+
+    .elemento:nth-child(2) #titulo2 {
+      font-weight: bolder;
+    }
+
+    .elemento:nth-child(2) p {
+      padding: 20px;
+    }
+
+    .elemento:nth-child(3) {
+      width: 49.2%;
+    }
+
+    .elemento:nth-child(3) #titulo3 {
+      font-weight: bolder;
+    }
+
+    .elemento:nth-child(3) p {
+      padding: 20px;
+    }
+
+    div .img,
+    #img1 {
+      text-align: center;
+      margin: 10px;
+    }
+
+    #valores {
+      display: flex;
+      background-color: #191919;
+      margin-top: 20px;
+      padding: 19px;
+      justify-content: center;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    #valores ul li {
+      color: #F08F3C;
+      cursor: default;
+    }
+
+    #valores ul li:hover {
+      color: #DA6400;
+    }
+
+    div #val {
+      list-style: none;
+    }
+
+    #contenido {
+      visibility: hidden;
+      color: #191919;
+      background-color: #F5F5F5;
+      margin-top: 4px;
+      padding: 22px;
+      justify-content: center;
+      display: flex;
+    }
+
+    div.politica h2.title strong {
+      color: #F08F3C;
+    }
+
+    .elemento2 {
+      padding: 5px;
+      min-width: 105px;
+      margin-left: 5px;
+      margin-top: 5px;
+      margin-bottom: 6px;
+      display: inline-block;
+      width: 49.2%;
+      text-align: center;
+    }
+
+    .elemento2:nth-child(1) {
+      width: 49.2%;
+    }
+
+    .elemento2:nth-child(2) {
+      width: 49.2%;
+    }
+
+    ul.lista {
+      background-color: #191919;
+      color: #F5F5F5;
+      padding: 20px;
+      justify-content: center;
+      width: 100%;
+      max-width: 4000px;
+      list-style: none
+    }
+
+    .list {
+      color: orange;
+      padding: 4px
+    }
+
+    div .elemento strong {
+      color: #F08F3C;
+    }
+
+    div.contenedor-boton #trabaje {
+      font-size: 20px;
+      border-color: black;
+      border: 2px solid #F08F3C;
+      color: #191919;
+      padding: 10px;
+      margin: 20px;
+      cursor: pointer;
+      background: linear-gradient(to left, transparent 50%, #F08F3C 50%);
+      background-size: 200%;
+      background-position: right;
+      transition: background-position 0.5s;
+      font-weight: 700;
+    }
+
+    div.contenedor-boton #trabaje:hover {
+      background-position: left;
+      color: #191919;
+      font-weight: 700;
+    }
+
+    div#img1 figure figcaption {
+      background-color: #191919;
+      padding: 15px;
+      color: #F08F3C;
+      margin-top: 5px;
+      margin-left: 390px;
+      margin-right: 390px;
+      margin-bottom: 5px;
+      font-size: 20px;
+      font-weight: bolder;
+    }
+  </style>
+
+  <script>
+    var exce = "La excelencia es una virtud, un talento o cualidad, lo que resulta extraordinariamente bueno y también lo que exalta las normas ordinarias. Es también un objetivo para el estándar de rendimiento y algo perfecto.";
+    var innv = "La innovación no solo se basa en desarrollar nuevos productos, también supone impulsar nuevos modelos de negocio, ofrecer nuevos servicios y mejorar procesos para hacer más fácil la vida de las personas. Pero sobre todo, se basa en que estos estos avances lleguen a quienes los necesitan.";
+    var inte = "Como valor humano, la integridad es una elección personal y un compromiso de consistencia con honrar la ética, los valores y los principios. En ética, la integridad considera la veracidad y transparencia de las acciones personales, por tanto, se opone a la falsedad o el engaño.";
+    var pasion = "Es un sentimiento de certeza, de seguridad que se genera dentro de las personas y que da como resultado grandes ideas, proyectos y empresas. Cuando trabajas en tu pasión transmites a los que te rodean ese hambre por triunfar y por vivir al máximo.";
+    var trbeq = "El trabajo en equipo multiplica nuestra productividad, crea valor al efectuar tareas que se complementan entre sí y contribuye al desarrollo de todos. Un principio estrictamente económico que guía el trabajo en equipo es el de la división del trabajo.";
+
+
+    function cambiarValor(nodoA) {
+
+      var div = document.querySelector("#contenido");
+      div.style = "visibility: visible;";
+
+      var nodoParrafo = document.createElement("p");
+      nodoParrafo.style.textAlign = 'justify';
+      nodoParrafo.style.width = '87%';
+      nodoParrafo.style.fontSize = '20px';
+      nodoParrafo.style.marginLeft = '20px';
+      nodoParrafo.style.fontFamily = 'Arial';
+
+      let contenido = '';
+
+
+      let id = nodoA.id;
+      switch (nodoA.id) {
+        case "uno":
+          contenido = exce;
+          break;
+        case "dos":
+          contenido = innv;
+          break;
+        case "tres":
+          contenido = inte;
+          break;
+        case "cuatro":
+          contenido = pasion;
+          break;
+        case "cinco":
+          contenido = trbeq;
+        default:
+          break;
+      }
+      nodoParrafo.textContent = contenido;
+      div.appendChild(nodoParrafo);
+    }
+
+
+    function borrarValor(nodoA) {
+      var div = document.querySelector("#contenido");
+
+      while (div.hasChildNodes()) {
+        div.removeChild(div.firstChild);
+      }
+      contenido.style.visibility = 'hidden';
+    }
+  </script>
+  <script>
+    function cambiar1(nodoA) {
+      let img = document.getElementById('mecanico1');
+
+      img.src = "img/mecanico1.jpg";
+
+      nodoA.textContent = 'Mecanico nombrado como el mejor empleado.';
+    }
+
+    function cambiar2(nodoB) {
+      let img = document.getElementById('mecanico1');
+
+      img.src = "img/mecanico2.jpg";
+
+      nodoB.textContent = 'Trabajo realizado por el mecánico';
+    }
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="box-left imagen">
+          <img src="img/logo.png" alt="logo">
+        </div>
+
+        <div class="box-left logo-name">
+          <h1>Taller Automotriz</h1>
+          <h2>Grupo #2</h2>
+        </div>
+      </div>
+      <nav class="main-menu">
+        <a href="Inicio.html">Inicio</a>
+        <a href="QuienesSomos.html">Quiénes Somos</a>
+        <a href="serviciotec.html">Servicios Técnicos</a>
+        <a href="EquipoTrabajo.html">Nuestro Equipo</a>
+        <a href="Contacto.html">Contacto</a>
+      </nav>
+    </header>
+    <main>
+      <section class="seccion">
+        <div class="elemento">
+          <br>
+          <h2 class="titulo1">¿Quienes <strong>somos?</strong></h2><br>
+          <p>Somos una empresa dedicada a la restauración, modificación, venta de repuestos y entre otras actividades
+            dedicadas a la ingeniería automotríz.</p>
+        </div>
+        <div class="elemento">
+          <h3 id="titulo2" class="title">Origen</h3><br>
+          <p class="info">Nuestro origen se remonta a el año 2010, con una idea clara de ayudar a los dueños de
+            automóviles con fallas a solucionar de la mejor manera estos fallos.</p>
+        </div>
+        <div class="elemento">
+          <h3 id="titulo3" class="title">Objetivo</h3><br>
+          <p class="info">Tenemos como objetivo dar una buena impresión a nuestros clientes, realizar nuestros trabajos
+            bien, para que sigan acudiendo a nuestra empresa.</p>
+        </div>
+        <br>
+        <hr>
+        <br>
+
+        <div class="Valores">
+          <h2 class="title">VALORES</h2>
+          <div id="valores">
+            <ul id="val">
+              <li id="uno" href="#" onmouseover="cambiarValor(this)" onmouseout="borrarValor(this)">Excelencia</li>
+              <li id="dos" href="#" onmouseover="cambiarValor(this)" onmouseout="borrarValor(this)">Innovación</li>
+              <li id="tres" href="#" onmouseover="cambiarValor(this)" onmouseout="borrarValor(this)">Integridad</li>
+              <li id="cuatro" href="#" onmouseover="cambiarValor(this)" onmouseout="borrarValor(this)">Pasión</li>
+              <li id="cinco" href="#" onmouseover="cambiarValor(this)" onmouseout="borrarValor(this)">Trabajo en equipo
+              </li>
+            </ul>
+          </div>
+          <div id="contenido">
+
+          </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <section class="seccion2">
+          <div class="politica">
+            <h2 class="title">Política <strong>de seguridad</strong></h2>
+            <br>
+            <div class="elemento2">
+              <p>Somos una compañía dedicada a la comercialización de bienes y servicios en la línea automotriz e
+                industrial, creando satisfacción y valor, cumpliendo o excediendo las expectativas de nuestros clientes,
+                empleados, accionistas y proveedores, enmarcado en nuestra misión y visión. Reconocemos el liderazgo
+                como parte fundamental en el desempeño y crecimiento de la organización y a esta Política como la base
+                para alcanzar nuestros objetivos, comprometidos en:
+            </div>
+            <div class="elemento2">
+              <ul class="lista">
+                <li><span class="list icon-checkmark"></span>Cumplir con las leyes ecuatorianas aplicables a nuestra
+                  operación.</li>
+                <li><span class="list icon-checkmark"></span>Mantener un Sistema de Gestión de Seguridad basado en la
+                  mejora continua.</li>
+                <li><span class="list icon-checkmark"></span>Garantizar operaciones y un ambiente de trabajo seguro y
+                  confiable para nuestros empleados, contratistas y el medio ambiente</li>
+                <li><span class="list icon-checkmark"></span>La asignación de recursos para el desarrollo de esta
+                  política.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <br>
+        <hr>
+        <br>
+
+        <h2 class="title">Compromiso <strong>Ambiental</strong></h2>
+        <div class="compromiso">
+          <div class="img">
+            <figure>
+              <img src="img/comAmb.png" alt="Compromiso">
+            </figure>
+          </div>
+          <!-- Hoja de estilo en línea -->
+          <p style="color: #191919;  padding: 10px; font-size: 18px;">
+            <b style="font-size: 20px;">RELUGAL</b> es una iniciativa que nace de un pescador artesanal de Galápagos, el
+            cual decide cambiar su actividad de explotación marina, por una actividad conservacionista, enfocada en la
+            recolección, manipulación y transportación de todos los aceites e hidrocarburos usados generados en las
+            Islas Galápagos.
+          </p>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="mecanicos">
+          <div id="img1">
+            <h3 class="title">Nuestros <strong>mecánicos</strong></h3>
+            <br>
+            <p>El trabajo realizado por nuestros mecánicos es a lo que nuestra empresa le da prioridad, tratando siempre
+              de mejorar los servicios que prestamos, para que los usuarios que acuden a nosotros día a día queden
+              satisfechos con nuestro trabajo, para ello la preparación de nuestros trabajadores es a lo que le damos
+              más importancia.</p>
+            <br>
+            <figure>
+              <img src="img/mecanico1.jpg" id="mecanico1" alt="Mecanico" width="390" height="300">
+              <figcaption id="cambiar" onmouseover="cambiar1(this)" onmouseout="cambiar2(this)">Mecanico nombrado como
+                el mejor empleado.</figcaption>
+            </figure>
+          </div>
+          <br>
+        </div>
+        <div class="contenedor-boton">
+          <a id="trabaje" href="Solicitud.html">Trabaje con nosotros</a>
+        </div>
+        <br>
+      </section>
+    </main>
+
+    <footer>
+      <p class="text-footer"><strong>Taller Mecánico Automotriz DAW</strong></p>
+      <p class="text-footer">Grupo #2</p>
+      <div class="social-media">
+        <div class="button">
+          <div class="icons" style="--clr:#0061A9">
+            <i class="red icon-facebook"></i>
+          </div>
+          <a href="https://www.facebook.com/Arturo0440/"><span>Facebook</span></a>
+        </div>
+        <div class="button">
+          <div class="icons" style="--clr:#E1306C">
+            <i class="red icon-instagram"></i>
+          </div>
+          <a href="https://www.instagram.com/jeanc0312/?hl=es-la"><span>Instagram</span></a>
+        </div>
+        <div class="button">
+          <div class="icons" style="--clr:#25D366">
+            <i class="red icon-whatsapp"></i>
+          </div>
+          <a href="https://wa.me/593992145076"><span>Whatsapp</span></a>
+        </div>
+      </div>
+      <p class="text-footer">2022 &#169; Todos los derechos reservados.</p>
+    </footer>
+  </div>
+</body>
+
+
+
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Ejemplo de HTML5" />
+    <meta name="keywords" content="HTML5, CSS3, JavaScript" />
+    <title>Taller Automotriz</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Hoja de estilo interna -->
+    <style>
+        div.cabecera h2 strong {
+            color: #F08F3C;
+        }
+
+        .contenedor {
+            background: #fff;
+            border-radius: 2px;
+            box-shadow: 19px 20px 8px -9px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .cabecera {
+            background: #C8C8C8;
+            color: black;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+            padding: 20px 40px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        #formulario {
+            padding: 30px 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+
+        .form-control {
+            margin-bottom: 7px;
+            padding-bottom: 20px;
+            position: relative;
+        }
+
+        .form-control label {
+            display: inline-block;
+            margin-bottom: 7px;
+            font-weight: 200;
+        }
+
+        .form-control input {
+            border: none;
+            background-color: #DCD3D3;
+            display: block;
+            font-family: inherit;
+            font-size: 16px;
+            padding: 12px;
+            width: 40%;
+        }
+
+        .form-control,
+        input:focus {
+            outline: none;
+        }
+
+        .form-control,
+        textarea:focus {
+            outline: none;
+        }
+
+        .form-control,
+        select:focus {
+            outline: none;
+        }
+
+        .form-control.ok input {
+            border: 0.1px solid;
+            border-color: #08ffc8;
+        }
+
+        .form-control.ok textarea {
+            border: 0.1px solid;
+            border-color: #08ffc8;
+        }
+
+        .form-control.ok select {
+            border: 0.1px solid;
+            border-color: #08ffc8;
+        }
+
+        .form-control.falla input {
+            border: 0.1px solid;
+            border-color: #fe5f55;
+        }
+
+        .form-control.falla textarea {
+            border: 0.1px solid;
+            border-color: #fe5f55;
+        }
+
+        .form-control.falla select {
+            border: 0.1px solid;
+            border-color: #fe5f55;
+        }
+
+
+        div #regresar {
+            font-size: 20px;
+            color: #373737;
+            text-align: center;
+            padding: 10px;
+            flex-grow: 1;
+
+        }
+
+        #formulario #button {
+            font-size: 20px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        div.contenedor-boton #regresar {
+            font-size: 20px;
+            border-color: black;
+            border: 2px solid #F08F3C;
+            color: #191919;
+            padding: 10px;
+            margin: 20px;
+            cursor: pointer;
+            background: linear-gradient(to right, transparent 50%, #F08F3C 50%);
+            background-size: 200%;
+            background-position: left;
+            transition: background-position 0.5s;
+            font-weight: 700;
+        }
+
+        div.contenedor-boton #regresar:hover {
+            background-position: right;
+            color: #191919;
+            font-weight: 700;
+        }
+
+        .form-control p {
+            visibility: hidden;
+            position: absolute;
+            font-size: small;
+            font-weight: 500;
+            text-align: right;
+        }
+
+        .form-control.falla p {
+            visibility: visible;
+            color: #e74c3c;
+        }
+
+        .form-control span {
+            margin-right: 1.2px;
+        }
+
+        .select {
+            width: 100%;
+            font-size: 18px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            margin-left: 0.5px;
+        }
+        div.form-control label.gen{
+            width: 1%;
+            float: left;
+            margin-bottom: 7px;
+        }
+        div.form-control input.gen2{
+            width: 10%;
+            margin-bottom: 10px;
+            float: left;
+        }
+
+    </style>
+
+    <script>
+        function validaCampos() {
+            var form = document.querySelector('#formulario')
+            var nombre = document.getElementById('nombre');
+            var apellido = document.getElementById('apellido')
+            var email = document.getElementById('email')
+            var seleccion = document.getElementById('seleccion')
+            var telefono = document.getElementById('telefono')
+            var sexo = document.getElementById('H')
+            var mensaje = document.getElementById('mensaje')
+
+            var valido = true;
+
+            var nombreValor = nombre.value.trim()
+            var apellidoValor = apellido.value.trim()
+            var emailValor = email.value.trim()
+            var telefonoValor = telefono.value.trim()
+            var mensajeValor = mensaje.value.trim();
+            limpiar();
+            //Validar nombre
+            var nombreV = /^[a-zA-ZÀ-ÿ\s]{1,40}$/
+            if (!nombreValor) {
+                valido = false
+                validaFalla(nombre, 'Campo vacío')
+            } else if (!nombreValor.match(nombreV)) {
+                valido = false
+                validaFalla(nombre, 'Debe contener solo letras.')
+            } else {
+                validaOk(nombre)
+            }
+
+            //Validar apellido
+            var apellidoV = /^[a-zA-ZÀ-ÿ\s]{1,40}$/
+            if (!apellidoValor) {
+                valido = false
+                validaFalla(apellido, 'Campo vacío')
+            } else if (!apellidoValor.match(apellidoV)) {
+                valido = false
+                validaFalla(apellido, 'Debe contener solo letras.')
+            } else {
+                validaOk(apellido)
+            }
+
+            //validar email
+            if (!emailValor) {
+                valido = false
+                validaFalla(email, 'Campo vacío')
+            } else if (!validaEmail(emailValor)) {
+                valido = false
+                validaFalla(email, 'El e-mail no es válido')
+            } else {
+                validaOk(email)
+            }
+
+            //Validar teléfono
+            telefonoV = /^\d{7,10}$/
+            if (!telefonoValor) {
+                valido = false
+                validaFalla(telefono, 'Campo vacío')
+            } else if (telefonoValor.length > 10 || telefonoValor.length < 10) {
+                valido = false
+                validaFalla(telefono, 'Debe tener 10 números.')
+            } else if (!telefonoValor.match(telefonoV)) {
+                valido = false
+                validaFalla(telefono, 'Debe contener solo números.')
+            } else {
+                validaOk(telefono)
+            }
+
+            //Validar selección de profesión
+            if (seleccion.value === '0') {
+                valido = false
+                validaFalla(seleccion, 'Elija una opción')
+            } else {
+                validaOk(seleccion)
+            }
+
+
+            //Validar mensaje
+            if (!mensajeValor) {
+                valido = false
+                validaFalla(mensaje, 'Campo vacío')
+            } else if (mensajeValor.length < 20) {
+                valido = false
+                validaFalla(mensaje, 'Digite más de 30 carácteres')
+            } else if (mensajeValor.length >400){
+                validaFalla(mensaje, 'El mensaje no puede tener más de 400 carácteres')
+            }else {
+                validaOk(mensaje)
+            }
+
+            //Validar sexo
+            if (!document.querySelector('input[name="sexo"]:checked')) {
+                valido = false
+                validaFalla(sexo, 'Selecciona un género');
+            } else {
+                validaOk(sexo)
+            }
+
+            return valido;
+        }
+
+        function validaFalla(input, msje) {
+            var formControl = input.parentElement
+            var aviso = formControl.querySelector('p')
+            aviso.innerText = msje
+
+            formControl.className = 'form-control falla'
+        }
+        function validaOk(input) {
+            var formControl = input.parentElement
+            formControl.className = 'form-control ok'
+
+        }
+        function limpiar() {
+            var elementos = document.querySelectorAll(".elemento1");
+
+            for (let i = 0; i < elementos.length; i++) {
+                elementos[i].remove();
+            }
+        }
+        function validaEmail(email) {
+            return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="box-left imagen">
+                    <img src="img/logo.png" alt="logo">
+                </div>
+
+                <div class="box-left logo-name">
+                    <h1>Taller Automotriz</h1>
+                    <h2>Grupo #2</h2>
+                </div>
+            </div>
+            <nav class="main-menu">
+                <a href="Inicio.html">Inicio</a>
+                <a href="QuienesSomos.html">Quiénes Somos</a>
+                <a href="serviciotec.html">Servicios Técnicos</a>
+                <a href="EquipoTrabajo.html">Nuestro Equipo</a>
+                <a href="Contacto.html">Contacto</a>
+            </nav>
+        </header>
+    </div>
+    <main>
+        <br>
+        <div class="contenedor-boton">
+            <a id="regresar" href="QuienesSomos.html">
+                Regresar
+            </a>
+        </div>
+        <br>
+        <div class="contenedor">
+            <div class="cabecera">
+                <h2>Solicitud <strong>de trabajo</strong></h2>
+            </div>
+            <form id="formulario" onsubmit="return validaCampos()">
+
+                <div class="form-control">
+                    <label for="nombre">Nombres</label>
+                    <input id="nombre" type="text">
+                    <p></p>
+                </div>
+
+                <div class="form-control">
+                    <label for="apellido">Apellidos</label>
+                    <input id="apellido" type="text">
+                    <p></p>
+                </div>
+
+
+                <div class="form-control">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="text">
+                    <p></p>
+                </div>
+
+                <div class="form-control">
+                    <label for="telefono">Teléfono</label>
+                    <input id="telefono" type="text">
+                    <p></p>
+                </div>
+
+                <div class="form-control">
+                    <label>Tipo de profesión</label><br>
+                    <select name="seleccionar" id="seleccion" class="select">
+                        <option value="0">Seleccionar</option>
+                        <option value="1">Ingeniero</option>
+                        <option value="2">Técnico</option>
+                        <option value="3">Electricista</option>
+                        <option value="4">Otro</option>
+                    </select>
+                    <p></p>
+                </div>
+                <div class="form-control">
+                    <label>Elija su sexo</label><br>
+                    <label class="gen">Hombre</label>
+                    <input type="radio" value="H" name="sexo" id="H" class="gen2">
+                    <label class="gen">Mujer</label>
+                    <input type="radio" value="M" name="sexo" id="M" class="gen2">
+                    <p style="font-weight: bolder; font-size: 14px; margin-top: 25px; margin-bottom: 22px;"></p>
+                </div>
+                <div class="form-control">
+                    <label style="margin-top: 22px;">Mensaje</label><br>
+                    <textarea name="message" id="mensaje" cols="177" rows="10"></textarea>
+                    <p></p>
+                </div>
+
+                <input type="submit" name="enviar" value="Enviar" id="button">
+            </form>
+        </div>
+    </main>
+    <div class="container">
+        <footer>
+            <p class="text-footer"><strong>Taller Mecánico Automotriz DAW</strong></p>
+            <p class="text-footer">Grupo #2</p>
+            <div class="social-media">
+                <div class="button">
+                    <div class="icons" style="--clr:#0061A9">
+                        <i class="red icon-facebook" id="facebook"></i>
+                    </div>
+                    <a href="https://www.facebook.com/Arturo0440/"><span id="facebook1">Facebook</span></a>
+                </div>
+                <div class="button">
+                    <div class="icons" style="--clr:#E1306C">
+                        <i class="red icon-instagram" id="instagram"></i>
+                    </div>
+                    <a href="https://www.instagram.com/jeanc0312/?hl=es-la"><span id="instagram1">Instagram</span></a>
+                </div>
+                <div class="button">
+                    <div class="icons" style="--clr:#25D366">
+                        <i class="red icon-whatsapp" id="whatsapp"></i>
+                    </div>
+                    <a href="https://wa.me/593992145076"><span id="whatsapp1">Whatsapp</span></a>
+                </div>
+            </div>
+            <p class="text-footer">2022 &#169; Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+
+
+
+</html>

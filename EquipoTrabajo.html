@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Taller Mecánico Automotriz DAW - Nuestro Equipo de Trabajo">
+		<meta name="keywords" content="Proyecto, DAW, Taller Mécanico Automotriz, Equipo de Trabajo">
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<style>
+			.title {
+				margin: auto;
+				width: 80%;
+				text-align: center;
+				padding: 20px;
+			}
+
+			.teammates {
+				margin: auto;
+				width: 60%;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.teammate {
+				background-color: #F4F4F4;
+				width: 40%;
+				margin: 15px;
+				text-align: center;
+				padding: 10px;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				flex-grow: 1;
+			}
+
+			.img-teammate {
+				width: 100%;
+			}
+
+			.imagen-tm {
+				width: 100%;
+				height: 350px;
+			}
+
+			.title-teammate, .name-teammate, .social-teammate {
+				padding: 10px;
+				width: 100%;
+			}
+
+			div[class^="social-t"] {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.icon {
+				margin: 5px;
+				font-size: 20px;
+			}
+
+			#about {
+				margin: auto;
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+
+			.box-about {
+				width: 50%;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+				flex-grow: 1;
+			}
+
+			.title-about {
+				font-size: 35px;
+			}
+
+			.text-about {
+				text-align: justify;
+				padding: 15px;
+				width: 100%;
+			}
+
+			.leftbox-about {
+				background-color: #F4F4F4;
+			}
+
+			.rightbox-about {
+				background-color: #191919;
+				color: #F4F4F4;
+			}
+
+			.list {
+				color: orange;
+			}
+
+			.phrase {
+				margin: auto;
+				width: 100%;
+				text-align: center;
+				background-color: #191919;
+				padding: 55px;
+			}
+
+			.title-phrase {
+				font-size: 35px;
+				color: #F08F3C;
+			}
+
+			.text-phrase {
+				font-size: 25px;
+				margin: 5px;
+				color: #F4F4F4;
+			}
+
+			.working {
+				margin: auto;
+				width: 60%;
+				background-color: #F4F4F4;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+
+			.work-box {
+				width: 100%;
+				padding: 15px;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+
+			.text-work {
+				width: 100%;
+				padding: 10px;
+				text-align: center;
+			}
+
+			.bottom-box {
+				background-color: #191919;
+			}
+
+			.work {
+				margin: 15px;
+				font-size: 20px;
+				color: #F4F4F4;
+				text-align: center;
+			}
+
+			.social-teammate .icon {
+				color: #000;
+			}
+
+			.questions {
+				width: 100%;
+				background-color: #F4F4F4;
+			}
+
+			.question {
+				width: 100%;
+				border-top: 0.1px solid #7F7679;
+			}
+
+			.title-question {
+				font-size: 35px;
+				padding: 15px;
+				width: 100%;
+			}
+
+			.question-box {
+				padding: 15px;
+				width: 100%;
+				font-size: 20px;
+			}
+
+			.question-box span {
+				margin-left: 10px;
+			}
+
+			.question-box span:hover {
+				cursor: pointer;
+			}
+
+			.answer-box {
+				font-size: 18px;
+				width: 100%;
+			}
+
+			.answer-box p {
+				margin-left: 30px;
+				text-align: justify;
+			}
+		</style>
+		<title>Taller Mecánico Automotriz DAW</title>
+	</head>
+
+	<body>
+		<div id="container">
+			<header>
+				<div class="logo">
+					<div class="box-left imagen">
+						<img src="img/logo.png" alt="logo">
+					</div>
+					
+					<div class="box-left logo-name">
+						<h1>Taller Automotriz</h1>
+						<h2>Grupo #2</h2>
+					</div>
+				</div>
+				<nav class="main-menu">
+					<a href="Inicio.html">Inicio</a>
+					<a href="QuienesSomos.html">Quiénes Somos</a>
+					<a href="serviciotec.html">Servicios Técnicos</a>
+					<a href="EquipoTrabajo.html">Nuestro Equipo</a>
+					<a href="Contacto.html">Contacto</a>
+				</nav>
+			</header>
+
+			<div class="title">
+				<h1>Nuestro <strong>Equipo de Trabajo</strong></h1>
+			</div>
+
+			<div class="teammates">
+				<div class="teammate">
+					<div class="img-teammate">
+						<img src="img/mecanico.png" alt="Ati" class="imagen-tm">
+					</div>
+					<h4 class="title-teammate">Asesor de Servicio</h4>
+					<span class="name-teammate">John Ati Heras</span>
+					<div class="social-teammate">
+						<a href="https://www.facebook.com/Arturo0440/"><span class="icon icon-facebook"></span></a>
+						<a href="https://www.instagram.com/jeanc0312/?hl=es-la"><span class="icon icon-instagram"></span></a>
+						<a href="https://wa.me/593992145076"><span class="icon icon-whatsapp"></span></a>
+					</div>
+				</div>
+				<div class="teammate">
+					<div class="img-teammate">
+						<img src="img/mecanico.png" alt="Cueva" class="imagen-tm">
+					</div>
+					<h4 class="title-teammate">Asesor Técnico</h4>
+					<span class="name-teammate">Jean Cueva Aguilar</span>
+					<div class="social-teammate">
+						<a href="https://www.facebook.com/Arturo0440/"><span class="icon icon-facebook"></span></a>
+						<a href="https://www.instagram.com/jeanc0312/?hl=es-la"><span class="icon icon-instagram"></span></a>
+						<a href="https://wa.me/593992145076"><span class="icon icon-whatsapp"></span></a>
+					</div>
+				</div>
+				<div class="teammate">
+					<div class="img-teammate">
+						<img src="img/mecanico.png" alt="Panchez" class="imagen-tm">
+					</div>
+					<h4 class="title-teammate">Líder de Calidad</h4>
+					<span class="name-teammate">Michael Panches Iñiguez</span>
+					<div class="social-teammate">
+						<a href="https://www.facebook.com/Arturo0440/"><span class="icon icon-facebook"></span></a>
+						<a href="https://www.instagram.com/jeanc0312/?hl=es-la"><span class="icon icon-instagram"></span></a>
+						<a href="https://wa.me/593992145076"><span class="icon icon-whatsapp"></span></a>
+					</div>
+				</div>
+				<div class="teammate">
+					<div class="img-teammate">
+						<img src="img/mecanico.png" alt="Villavicencio" class="imagen-tm">
+					</div>
+					<h4 class="title-teammate">Jefe de Taller</h4>
+					<span class="name-teammate">Arturo Villavicencio Villa</span>
+					<div class="social-teammate">
+						<a href="https://www.facebook.com/Arturo0440/"><span class="icon icon-facebook"></span></a>
+						<a href="https://www.instagram.com/jeanc0312/?hl=es-la"><span class="icon icon-instagram"></span></a>
+						<a href="https://wa.me/593992145076"><span class="icon icon-whatsapp"></span></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="separator">
+				
+			</div>
+
+			<div id="about">
+				<div class="box-about leftbox-about">
+					<div class="left-content">
+						<h2 class="title-about text-about">Nuestra <strong>Misión</strong></h2>
+						<p class="text-about">Crear fuentes de trabajo en nuestro país preocupándonos por el crecimiento sustentado de nuestro personal en todos los ámbitos de su entorno, logrando de esta manera ser un aporte al crecimiento del Ecuador.</p>
+						<br>
+						<h2 class="title-about text-about">Nuestra <strong>Visión</strong></h2>
+						<p class="text-about">Destacarnos como una empresa de servicios diferente donde nuestros clientes formen parte de nuestro negocio y que nos reconozcan por nuestra capacidad técnica, honestidad y garantías de todos nuestros servicios.</p>
+					</div>
+				</div>
+				<div class="box-about rightbox-about">
+					<p class="text-about"><span class="list icon-checkmark"></span> Garantía de servicio hasta por cinco años</p>
+					<p class="text-about"><span class="list icon-checkmark"></span> Atención personalizada</p>
+					<p class="text-about"><span class="list icon-checkmark"></span> Honestidad y claridad</p>
+					<p class="text-about"><span class="list icon-checkmark"></span> Servicio profesional de primera</p>
+					<p class="text-about"><span class="list icon-checkmark"></span> Equipos y herramientas de primera calidad</p>
+					<p class="text-about"><span class="list icon-checkmark"></span> Escáner digital</p>
+					<p class="text-about"><span class="list icon-checkmark"></span> Instalaciones limpias</p>
+					<p class="text-about"><span class="list icon-checkmark"></span> Diagnóstico digital</p>
+					<p class="text-about"><span class="list icon-checkmark"></span> Personal de confianza</p>
+				</div>
+			</div>
+
+			<div class="separator">
+				
+			</div>
+
+			<div class="phrase">
+				<h2 class="title-phrase">"Antes de decir que no puedes hacer algo, inténtalo"</h2>
+				<br>
+				<h4 class="text-phrase">Sakichi Toyoda</h4>
+				<p class="text-phrase">Fundador de Toyota</p>
+			</div>
+
+			<div class="separator">
+				
+			</div>
+
+			<div class="working">
+				<div class="work-box top-box">
+					<p class="text-work" style="font-size: 20px;">Trabajamos diariamente para crear relaciones basadas en la honestidad, confianza y respeto con nuestros clientes.</p>
+					<p class="text-work">Dentro de nuestros clientes tenemos empresas y personas naturales que buscan la calidad de un concesionario, con el trato de un taller amigo que sea capas de cumplir las más altas expectativas del mercado.</p>
+				</div>
+				<div class="work-box bottom-box">
+					<div class="work">
+						<span><strong>+1000</strong> Trabajos completados</span>
+					</div>
+					<div class="work">
+						<span><strong>+30</strong> Autos al día</span>
+					</div>
+					<div class="work">
+						<span><strong>+100</strong> Clientes satisfechos</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="separator">
+				
+			</div>
+
+			<div class="questions">
+				<h2 class="title-question">Preguntas <strong>Frecuentes</strong></h2>
+				
+				<div class="question">
+					<div class="question-box">
+						<i class="icon-circle-down"></i><span class="pregunta" id="q0">¿Cada cuánto tiempo debo dar mantenimiento a mi caja de transmisión automática?</span>
+					</div>
+					<div class="answer-box">
+						
+					</div>	
+				</div>
+				
+				<div class="question">
+					<div class="question-box">
+						<i class="icon-circle-down"></i><span class="pregunta" id="q1">¿Con qué frecuencia debo cambiar el aceite?</span>
+					</div>
+					<div class="answer-box">
+						
+					</div>	
+				</div>	
+				
+				<div class="question">
+					<div class="question-box">
+						<i class="icon-circle-down"></i><span class="pregunta" id="q2">¿Si mi caja de trasmisión automática presenta problemas tiene reparación?</span>
+					</div>
+					<div class="answer-box">
+						
+					</div>	
+				</div>
+
+				<div class="question">
+					<div class="question-box">
+						<i class="icon-circle-down"></i><span class="pregunta" id="q3">¿Cuándo debo cambiar las llantas?</span>
+					</div>
+					<div class="answer-box">
+						
+					</div>	
+				</div>
+
+				<div class="question">
+					<div class="question-box">
+						<i class="icon-circle-down"></i><span class="pregunta" id="q4">¿Con qué frecuencia debo cambiar los amortiguadores?</span>
+					</div>
+					<div class="answer-box">
+						
+					</div>	
+				</div>
+
+			</div>
+
+			<div class="separator">
+				
+			</div>
+
+			<footer>
+				<p class="text-footer"><strong>Taller Mecánico Automotriz DAW</strong></p>
+				<p class="text-footer">Grupo #2</p>
+				<div class="social-media">
+					<div class="button">
+						<div class="icons" style="--clr:#0061A9">
+							<i class="red icon-facebook" id="facebook"></i>
+						</div>
+						<a href="https://www.facebook.com/Arturo0440/"><span id="facebook1">Facebook</span></a>
+					</div>
+					<div class="button">
+						<div class="icons" style="--clr:#E1306C">
+							<i class="red icon-instagram" id="instagram"></i>
+						</div>
+						<a href="https://www.instagram.com/jeanc0312/?hl=es-la"><span id="instagram1">Instagram</span></a>
+					</div>
+					<div class="button">
+						<div class="icons" style="--clr:#25D366">
+							<i class="red icon-whatsapp" id="whatsapp"></i>
+						</div>
+						<a href="https://wa.me/593992145076"><span id="whatsapp1">Whatsapp</span></a>
+					</div>
+				</div>
+				<p class="text-footer">2022 &#169; Todos los derechos reservados.</p>
+			</footer>
+
+		</div>
+
+		<script>
+			var preguntas = document.querySelectorAll(".pregunta");
+
+			for (let i = 0; i < preguntas.length; i++) {
+				preguntas[i].addEventListener("click", clickear);
+			}
+
+			function clickear(e) {
+				var divpregunta = e.target.parentNode;
+				var contenedor = divpregunta.parentNode;
+				var divrespuesta = contenedor.children[1];
+
+				if (divrespuesta.children.length === 0) {
+					mostrar(e);
+				} else if (divrespuesta.children.length > 0) {
+					eliminar(e);
+				}
+			}
+
+			function mostrar(e) {
+				var divpregunta = e.target.parentNode;
+				var icono = divpregunta.children[0];
+				var contenedor = divpregunta.parentNode;
+				var divrespuesta = contenedor.children[1];
+				var id = e.target.id;
+				var text;
+
+				if (id === "q0") {
+					text = "Es recomendable realizar un mantenimiento preventivo cada 45.000 kilómetros.";
+				} else if (id === "q1") {
+					text = "Se recomienda un cambio de aceite entre los 8.000 y 16.000 kilómetros.";
+				} else if (id === "q2") {
+					text = "Si, toda caja de transmisión automática es reparable.";
+				} else if (id === "q3") {
+					text = "Es recomendable que se cambien las llantas mínimo cada 40.000 Kilómetros o 2 años.";
+				} else if (id === "q4") {
+					text = "Cada 80.000 Kilómetros o cada 4 años.";
+				}
+
+				var parrafo = document.createElement("p");
+				parrafo.textContent = text;
+				parrafo.className = "parrafo-respuesta";
+
+				icono.className = "icon-circle-up";
+				divrespuesta.style.padding = "15px";
+				divpregunta.style.backgroundColor = "#191919";
+				divpregunta.style.color = "#F08F3C";
+				
+				divrespuesta.appendChild(parrafo);
+			}
+
+			function eliminar(e) {
+				var divpregunta = e.target.parentNode;
+				var icono = divpregunta.children[0];
+				var contenedor = divpregunta.parentNode;
+				var divrespuesta = contenedor.children[1];
+				
+				icono.className = "icon-circle-down";
+				divrespuesta.style.padding = "0";
+				divpregunta.style.backgroundColor = "#F4F4F4";
+				divpregunta.style.color = "#000";
+
+				while (divrespuesta.children.length > 0) {
+					divrespuesta.removeChild(divrespuesta.lastChild);
+				}
+			}
+
+			var iconos = document.querySelectorAll(".icon");
+			for (let i = 0; i < iconos.length; i++) {
+				iconos[i].addEventListener("mouseover", resaltar);
+				iconos[i].addEventListener("mouseout", quitar);
+			}
+
+			function resaltar(e) {
+				var icono = e.target;
+				var clase = e.target.className;
+				var color;
+
+
+				if (clase === "icon icon-facebook") {
+					color = "#0061A9";
+				} else if (clase === "icon icon-instagram") {
+					color = "#E1306C";
+				} else if (clase === "icon icon-whatsapp") {
+					color = "#25D366";
+				}
+
+				icono.style.color = color;
+				icono.style.fontSize = "30px";
+			}
+
+			function quitar(e) {
+				var icono = e.target;
+				var clase = e.target.className;
+				
+				icono.style.color = "#000";
+				icono.style.fontSize = "20px";
+			}
+		</script>
+	</body>
+</html>
